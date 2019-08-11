@@ -14,9 +14,7 @@ With this factor in mind, the following question can be asked:
 
 &nbsp;
 
-So lets get started... <b>(see HouseM.ipynb)</b>
-
-
+If you are intrigued, have a look at <a href="https://github.com/Ltramper/A-visualisation-of-the-housing-market/blob/master/HouseM.ipynb">HouseM.ipynb</a>
 
 ---------------------------------
 
