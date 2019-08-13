@@ -13,7 +13,7 @@ With this factor in mind, the following question can be asked:
 
 &nbsp;
 
-If you are intrigued, have a look at <a href="https://github.com/Ltramper/A-visualisation-of-the-housing-market/blob/master/HouseM.ipynb">HouseM.ipynb</a>
+If you are intrigued, have a look at <a href="https://github.com/Ltramper/A-visualisation-of-the-housing-market/blob/master/HouseM.ipynb">HouseM.ipynb</a> (backup link <a href="https://nbviewer.jupyter.org/github/Ltramper/Are-house-prices-contagious/blob/master/HouseM.ipynb">HouseM.ipynb</a>)
 
 ---------------------------------
 
