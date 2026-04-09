@@ -96,7 +96,13 @@ def print_measurement_tips() -> None:
 
 
 def suggest_schedule(measurement_times: list[int]) -> None:
-    """Print the suggested measurement schedule."""
+    """Print the suggested measurement schedule.
+
+    Parameters
+    ----------
+    measurement_times : list[int]
+        List of measurement times in minutes from the start of the decay.
+    """
     now = datetime.datetime.now()
     print("  Suggested measurement schedule:")
     for i, t in enumerate(measurement_times):
@@ -273,6 +279,22 @@ def compute_r_squared(
 ) -> float:
     """
     Compute the coefficient of determination (R²) for the fitted model.
+
+    Parameters
+    ----------
+    times_h : list[float]
+        Measurement times in hours.
+    concentrations : list[float]
+        Measured CO2 concentrations in ppm.
+    c_outdoor : float
+        Outdoor / background CO2 concentration in ppm.
+    ach : float
+        Fitted air exchange rate in h⁻¹.
+
+    Returns
+    -------
+    float
+        R² value between 0 and 1, where 1 indicates a perfect fit.
     """
     c0 = concentrations[0]
     predicted = [
@@ -295,7 +317,23 @@ def print_results(
     r_squared: float,
     room_volume: float | None,
 ) -> None:
-    """Print the results for a single ventilation mode."""
+    """Print the results for a single ventilation mode.
+
+    Parameters
+    ----------
+    mode_name : str
+        Name of the ventilation mode.
+    ach : float
+        Best-estimate air exchange rate in h⁻¹.
+    ach_low : float
+        Lower bound of ACH considering sensor uncertainty.
+    ach_high : float
+        Upper bound of ACH considering sensor uncertainty.
+    r_squared : float
+        Coefficient of determination for the fit.
+    room_volume : float or None
+        Room volume in m³, used to compute airflow rate. None to skip.
+    """
     print(f"  Mode: {mode_name}")
     print(f"  Air Exchange Rate (ACH): {ach:.2f} h⁻¹")
     print(f"  Uncertainty range:       {ach_low:.2f} – {ach_high:.2f} h⁻¹")
