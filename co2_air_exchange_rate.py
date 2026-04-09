@@ -32,8 +32,10 @@ MIN_MEASUREMENTS = 3
 # Minimum excess CO2 above outdoor level to consider the measurement valid (ppm)
 MIN_EXCESS_PPM = 100
 
-# Average CO2 emission rate of a person at rest (m³ CO2 per hour)
-# Approximately 0.005 m³/h ≈ 200 mL/min exhaled CO2
+# Average CO2 emission rate of a person at rest (m³ CO2 per hour).
+# Approximately 0.005 m³/h ≈ 200 mL/min exhaled CO2.
+# Provided as reference for users who want to estimate the impact
+# of briefly entering the room to take a measurement.
 HUMAN_CO2_EMISSION_RATE = 0.005
 
 
